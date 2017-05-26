@@ -20,6 +20,8 @@ Instead of teaching every developer Threat Modeling, leverage the availibility o
 ## What
 
 1. How can we train Security Champions in Threat Modeling?
+2. What knowledge to security champions need?
+3. How to manage consistency when different champions train differently?
 
 ## Who
 
