@@ -5,8 +5,8 @@ type         : workshop
 track        : Threat Model
 technology   :
 related-to   : Juice Shop
-when-day     : Tue
-when-time    : PM-1
+when-day     : Wed
+when-time    : Eve
 location     : Room-6
 status       : Improve outcomes
 organizers   : Adam Shostack
