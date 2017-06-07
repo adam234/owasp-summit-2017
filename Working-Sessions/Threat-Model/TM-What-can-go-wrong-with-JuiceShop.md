@@ -5,9 +5,9 @@ type         : workshop
 track        : Threat Model
 technology   :
 related-to   : Juice Shop
-when-day     : Tue
-when-time    : PM-1
-location     : Room-6
+when-day     : Wed
+when-time    : Eve
+location     : Villa-3
 status       : Improve outcomes
 organizers   : Adam Shostack
 participants : Dinis Cruz,Bjoern Kimminich
