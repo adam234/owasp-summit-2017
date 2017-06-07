@@ -5,8 +5,8 @@ type         : workshop
 track        : Threat Model
 technology   :
 related-to   : Juice Shop
-when-day     : Mon
-when-time    : PM-3
+when-day     : Tue
+when-time    : Eve
 location     : Room-6
 status       : Improve outcomes
 organizers   :
