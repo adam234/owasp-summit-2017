@@ -6,8 +6,8 @@ owasp-project: no
 track        : Threat Model
 technology   :
 related-to   : Juice Shop
-when-day     : Tue
-when-time    : AM-1
+when-day     : Thu
+when-time    : Eve
 location     : Room-6
 status       : Improve outcomes
 organizers   :
