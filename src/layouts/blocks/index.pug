@@ -1,13 +1,10 @@
 doctype html
 html
     head
-        | {% include page/header.html             %}
+        | {% include page/header.html                   %}
     body
-        | {% include page/menu.html               %}
+        | {% include page/menu.html                     %}
+        | {% include blocks/next-summit.html           %}
+        | {% include page/footer.html                   %}
+        | {% include page/google-analytics.html         %}
 
-        | {% include blocks/home-banner.html        %}
-        | {% include blocks/summit-intro.html       %}
-        | {% include blocks/featured-ws.html        %}
-        | {% include blocks/get-your-ticket.html    %}
-        | {% include page/footer.html             %}
-        | {% include page/google-analytics.html   %}

@@ -1,11 +1,14 @@
 ---
-layout: blocks/working-session
-title: title-goes-here
-type: workshop
-owasp-project:no
-organizers:
-track:
-status: draft
+layout       : blocks/working-session
+title        : title-goes-here
+type         : workshop
+owasp-project: no
+track        :
+technology   :
+related-to   :
+status       : draft
+organizers   :
+participants :
 ---
 
 ...intro text...
@@ -20,4 +23,4 @@ status: draft
 
 ## Who
 
-... who (target audience ...
+... target audience ...

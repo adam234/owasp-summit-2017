@@ -15,14 +15,10 @@ role            : Summit-Editor
 chapter-leader  : Uruguay
 job-title       : Uruguay Chapter Leader
 image           : https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAeMAAAAJDM4YTJiOGI0LWJkZDItNDliOC1iNzU4LWQ3Njk0ZmNhMWUxOQ.jpg
-linkedin        : https://linkedin.com/in/mateomartinez
+linkedin        : mateomartinez
 twitter         : MateoMartinezOK
-status          : fix-linkedin
+status          : done
+ticket          : 5x24h
+working-sessions: Incident Response Playbook,AppSec SOC Monitoring Visualisation,Owasp Latam Region,Owasp Student Chapters,What Should be Added to the Top 10,Threat and Vulnerability Management,Machine Learning and Security,Creating AppSec Talent (next 100k professionals),Sign Ceremony for Owasp Top 10 2017,SAMM - Maturity Models tool,Agile Practices for Security Teams,Hands on Threat Modeling Juice Shop (Deployment & Operations),Threat Modeling Tools
+# add above a comma delimited list of the Working Sessions you would like to attend (use the session's title)
 ---
-
-## Mateo Martinez
-
-I want to participate in several meetings of owasp project. Discuss about Latam region chapters needs. I want to create a workshop about student chapters.
-If I can participate on the CISO and OpenSAMM worskshop as well will be grat.
-
-We'd need flights and accommodation provided by OWASP as our company won't sponsor the trip - please let us know soon if this will be possible, as we'll need to announce & prepare the workshop.

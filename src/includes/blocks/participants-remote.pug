@@ -2,14 +2,10 @@ include ../mixins/participant
 
 .participants
     .container
-        h1 Remote Participants
+        | {{ content }}
 
-        p This is the current list of remote attendees (who will participate via Google Hangouts)
+        hr
 
-        .row
-            | {% for page in site.pages %}
-            | {%   if page.title and page.type == 'participant-remote' %}
-            .col-xs-4.col-sm-2
-                +participant()
-            | {%   endif  %}
-            | {% endfor %}
+        h4 Current list of remote participants
+        | {% assign type = 'participant-remote'               %}
+        + show-participants

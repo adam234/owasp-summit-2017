@@ -1,15 +1,98 @@
+include ../mixins/users.jade
+include ../mixins/working-session.jade
+
+| {% assign data = site.data.mapped.working-sessions[page.title]   %}
+
+mixin show-track
+    | {% if page.track != null %}
+    | {% assign tracks = page.track | split: ',' %}
+    b Track: &#32;
+    | {% for track in tracks %}
+    a(href="/Working-Sessions/{{ track | replace: ' ' , '-' }}") {{ track }}
+    |   {% if forloop.last != true %}
+    span ,
+    |   {% endif %}
+    | {% endfor %}
+    | {% endif %}
+    br
+
+mixin show-owasp-project
+    | {% if page.owasp-project and page.track != 'Project Summit' %}
+    b Part of the &#32;
+    a(href='/Working-Sessions/Project-Summit') OWASP Project Summit
+    | {% endif %}
+    br
+
+mixin show-when-day
+    b When: &#32;
+    a(href='/pages/schedule/by-track/{{data.metadata.when-day}}.html') {{data.metadata.when-day}}
+    br
+
+mixin show-when-time
+    b Time: {{ data.metadata.when-time }}
+    br
+
+mixin show-location
+    | {% case data.metadata.location %}
+    | {% when 'Room-1' %}
+    b Location: Kings
+    | {% when 'Room-2' %}
+    b Location: Portland
+    | {% when 'Room-3' %}
+    b Location: Larch
+    | {% when 'Room-4' %}
+    b Location: Montague
+    | {% when 'Room-5' %}
+    b Location: Maulden
+    | {% when 'Room-6' %}
+    b Location: Pedley
+    | {% else %}
+    b Location: {{ data.metadata.location  }}
+    | {% endcase %}
+    br
+
+mixin show-remote-link
+    | {% assign hangouts = 'https://hangouts.google.com/hangouts/_/owasp.org/' %}
+    | {% if data.metadata.remote %}
+    b Remote link: <a href="{{ data.metadata.remote }}"> join here</a>
+    br
+    | {% else %}
+    | {% case data.metadata.location %}
+    | {% when 'Room-1' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-1"> join here</a>
+    | {% when 'Room-2' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-2"> join here</a>
+    | {% when 'Room-3' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-3"> join here</a>
+    | {% when 'Room-4' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-4"> join here</a>
+    | {% when 'Room-5' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-5"> join here</a>
+    | {% when 'Room-6' %}
+    b Remote link: <a href="{{ hangouts }}summit-room-6"> join here</a>
+    | {% endcase %}
+    br
+    | {% endif                   %}
+
 .working-session
     .container
         h1 {{ page.title }}
-        h4 {% if page.track      != null %} Track       : {{ page.track      }} {% endif %}
-        h4 {% if page.organizers != null %} Organizer(s): {{ page.organizers }}  {% endif %}
-        | {% if page.owasp-project      %}
-        h4 Part of the &#32
-            a(href='/Working-Sessions/OWASP-Project-Summit.html') OWASP Project Summit
-        | {% endif %}
+        .ws-metadata
+            + show-track
+            + show-topics
+            + show-organizers
+            + show-panelists
+            + show-participants
+            + show-invites
+            + show-owasp-project
+            + show-when-day
+            + show-when-time
+            + show-location
+            + show-remote-link
         hr
         | {{ content }}
+        + show-related-to
         br
         hr
-        p Back to list of <a href='/website/working-sessions.html'>all Working Sessions</a>
+        p Back to list of <a href='/website/working-sessions.html'>all Working Sessions and Tracks</a>
         p Edit this page <a href='https://github.com/OWASP/owasp-summit-2017/blob/master/{{ page.path }}'>here </a>
